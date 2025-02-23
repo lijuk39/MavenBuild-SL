@@ -39,4 +39,8 @@ jobs:
         port: 22
         connect_timeout: 10s
         first_ssh: |
-          wget -O - "http://localhost:9090/java-example"
+          cd /var/lib/tomcat9/webapps
+        scp: |
+          './target/jenkinsFile' => /var/lib/tomcat9/webapps
+        last_ssh: |
+          groovy jenkinsFile
