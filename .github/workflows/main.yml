@@ -39,4 +39,4 @@ jobs:
         port: 22
         connect_timeout: 10s
         first_ssh: |
-         curl http://localhost:9090/java-example
+          wget -O - "http://localhost:9090/java-example"
