@@ -1,0 +1,6 @@
+node(){
+	
+	stage('Validate'){
+		wget -O - "http://localhost:9090/java-example"
+	}
+}
